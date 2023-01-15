@@ -6,7 +6,7 @@
 /*   By: nmaquet <nmaquet@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 06:11:09 by nmaquet           #+#    #+#             */
-/*   Updated: 2022/12/16 06:11:09 by nmaquet          ###   ########.fr       */
+/*   Updated: 2023/01/15 15:19:49 by nmaquet          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 
 	i = 0;
-	if (!s)
-		return (ft_strdup(""));
+	if (!f || !s)
+		return (NULL);
 	len = ft_strlen(s);
 	new = (char *)malloc(sizeof(char) * (len + 1));
 	if (!new)

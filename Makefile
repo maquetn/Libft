@@ -6,7 +6,7 @@
 #    By: nmaquet <nmaquet@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/14 18:27:38 by nmaquet           #+#    #+#              #
-#    Updated: 2023/01/14 18:56:57 by nmaquet          ###   ########.fr        #
+#    Updated: 2023/01/15 15:22:56 by nmaquet          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,16 +46,16 @@ SRC =   ft_atoi.c \
         ft_tolower.c \
         ft_toupper.c \
 		
-BONUS_PART =    ft_lstnew.c \
-                ft_lstadd_front.c \
-                ft_lstsize.c \
-                ft_lstlast.c \
-                ft_lstadd_back.c \
+BONUS_PART =	ft_lstnew.c \
+				ft_lstadd_front.c \
+				ft_lstsize.c \
+				ft_lstlast.c \
+				ft_lstadd_back.c \
 				ft_lstdelone.c \
 				ft_lstclear.c \
 				ft_lstiter.c \
 				ft_lstmap.c \
-                
+				
 HEAD = includes
 OBJ = ${SRC:.c=.o}
 OBJB =  ${BONUS_PART:.c=.o}
@@ -69,7 +69,7 @@ bonus: ${NAME} ${OBJB}
 	ar rc ${NAME} ${OBJB}
 	ranlib libft.a
 clean:
-	rm -f ${OBJ}
+	rm -f ${OBJ} ${OBJB}
 fclean: clean
 	rm -f ${NAME}
 re: fclean all
